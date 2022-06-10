@@ -1,0 +1,43 @@
+import turtle
+screen = turtle.Screen()
+t1 = turtle.Turtle("turtle")
+print("Podaj jaką figurę chcesz narysować:")
+n = input()
+print("Wpisz wymiary:")
+for i in range(1):
+    if n == "prostokat":
+        a = int(input())
+        b = int(input())
+        t1.forward(a)
+        t1.left(90)
+        t1.forward(b)
+        t1.left(90)
+        t1.forward(a)
+        t1.left(90)
+        t1.forward(b)
+    if n == "kolo":
+        a = int(input())
+        t1.circle(a)
+    if n == "trapez":
+        a = int(input())
+        b = int(input())
+        t1.forward(a)
+        t1.left(90 - 45)
+        t1.forward(b)
+        t1.left(90 + 45)
+        t1.forward(a)
+        t1.left(90 - 45)
+        t1.forward(b)
+        t1.left(90 + 45)
+    if n == "romb":
+        a = int(input())
+        t1.forward(a)
+        t1.left(90 - 45)
+        t1.forward(a)
+        t1.left(90 + 45)
+        t1.forward(a)
+        t1.left(90 - 45)
+        t1.forward(a)
+        t1.left(90 + 45)
+
+turtle.done()
